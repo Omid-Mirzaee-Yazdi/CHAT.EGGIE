@@ -1,23 +1,24 @@
 import React,{useState, useEffect} from 'react'
-import Message from './Message';
+import Message from './components/Message';
 import { Button, FormControl, Card,TextField, CardContent, Typography } from '@material-ui/core';
 import Send from '@material-ui/icons/Send';
-
 import FlipMove from 'react-flip-move';
 import firebase from 'firebase';
-import db from './conn';
+import db from '../conn';
+import "./chatroom.css";
 
 function ChatRoom(props) {
 
     const[input, setInput]=useState('');
     const[msg, setmsg]=useState([]);
 
-    useEffect(() => {
+    //fetch data
+    useEffect(() => { 
         db.collection(props.pointer).orderBy('timestamp','desc').onSnapshot(snapshot=>{
           setmsg(snapshot.docs.map(doc => ({id:doc.id, data: doc.data()})))
         })
       }, [])
-    
+    //send data
     const sendmsg = (event)=>{
         event.preventDefault();
         db.collection(props.pointer).add({

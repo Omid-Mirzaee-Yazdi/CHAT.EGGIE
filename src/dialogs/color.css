@@ -1,0 +1,9 @@
+.clrslc{
+    max-width: 500px !important;
+  }
+
+@media only screen and (max-width: 800px) {
+  .clrslc{
+    margin-top: -60px !important;
+  }
+}

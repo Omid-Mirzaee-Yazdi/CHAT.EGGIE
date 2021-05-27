@@ -1,6 +1,6 @@
 import React, {forwardRef} from 'react'
 import { Card, CardContent, Typography } from '@material-ui/core';
-import "./App.css";
+import "./Message.css";
 
 const FunctionalArticle = forwardRef((props, ref) => {
     let clss="guestmsg "

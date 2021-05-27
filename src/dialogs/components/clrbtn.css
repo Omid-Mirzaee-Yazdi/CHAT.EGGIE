@@ -1,0 +1,8 @@
+.colorbtn{
+    border-radius: 50px !important;
+    width: 100px;
+    height: 100px;
+    font-size: 12px !important;
+    margin:5px !important;
+    color:white !important;
+  }

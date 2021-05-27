@@ -1,25 +1,16 @@
 import React,{useState} from 'react'
 import { Button, FormControl,TextField } from '@material-ui/core';
 import MeetingRoomRoundedIcon from '@material-ui/icons/MeetingRoomRounded';
-import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
-import "./App.css";
+import "./pointer.css";
 
 function Pointer(props) {
 
-    const[inp, setInput]=useState('');
-    const useStyles = makeStyles({
-        title: {
-          fontSize: 14,
-        },
-        pos: {
-          marginBottom: 12,
-        },
-      });
-    const classes = useStyles();
-    const sendpointer = (event)=>{
+    const[inp, setInput]=useState(''); //handles input change
+
+      const sendpointer = (event)=>{
         event.preventDefault();
         props.setstate(inp);
         setInput('');
@@ -33,7 +24,7 @@ function Pointer(props) {
                     Eggie Anonymous Chat
                 </Typography>
                 <br />
-                <Typography className={classes.pos} color="textSecondary">
+                <Typography color="textSecondary">
                     keep the community clean! <br />
                     we hold no responsibility for your action!
 
@@ -67,7 +58,7 @@ function Pointer(props) {
                 </CardContent>
                 <br/><br/>
                 <p style={{color:"rgb(147, 147, 147)"}}>some copyright statements here
-            <br />built by <a style={{color:"rgb(147, 147, 147)"}} href="http://mirzaee.info" target="_blank"> Omid Mirzaee Yazdi.</a> powered by passion</p>
+            <br />built by <a style={{color:"rgb(147, 147, 147)"}} rel="noreferrer" href="http://omid.eggie.tech" target="_blank"> Omid Mirzaee Yazdi.</a> powered by passion</p>
             </Card>
             
         </div>

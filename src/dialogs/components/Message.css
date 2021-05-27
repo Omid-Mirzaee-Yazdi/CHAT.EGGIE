@@ -1,0 +1,27 @@
+.guestmsg{
+    border-radius: 20px 20px 20px 0!important;
+    max-width: 400px;
+    height: unset;
+    min-width: 30px;
+    margin: 5px;
+    float: left;
+    text-align: left;
+  }
+  .ownermsg{
+    border-radius: 20px 20px 0 20px !important;
+    max-width: 400px;
+    height: unset;
+    min-width: 30px;
+    margin: 5px;
+    float: right;
+    text-align: left;
+  }
+
+  @media only screen and (max-width: 800px) {
+    .guestmsg{
+      max-width: 250px;
+    }
+    .ownermsg{
+      max-width: 250px;
+    }
+  }
